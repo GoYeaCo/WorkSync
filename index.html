@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkSync - Smart Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header class="animate__animated animate__fadeInDown">
+            <h1>WorkSync</h1>
+            <img src="logo.png" alt="WorkSync Logo" id="headerLogo">
+            <nav>
+                <button class="nav-btn active" data-view="calendar">Calendar</button>
+                <button class="nav-btn" data-view="events">Events</button>
+            </nav>
+        </header>
+
+        <main>
+            <section id="calendar-view" class="animate__animated animate__fadeIn">
+                <div class="calendar-header">
+                    <button id="prevMonth">&lt;</button>
+                    <h2 id="currentMonth">September 2023</h2>
+                    <button id="nextMonth">&gt;</button>
+                </div>
+                <div class="calendar-grid" id="calendarGrid"></div>
+            </section>
+
+            <section id="event-form" class="modal">
+                <div class="modal-content animate__animated animate__zoomIn">
+                    <h3>Add New Event</h3>
+                    <form id="newEventForm">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" id="eventTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Date</label>
+                            <input type="date" id="eventDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Time</label>
+                            <input type="time" id="eventTime" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea id="eventDescription"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Attachments</label>
+                            <input type="file" id="eventFiles" multiple>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Save Event</button>
+                            <button type="button" class="btn-secondary" id="cancelEvent">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section id="events-list" class="animate__animated animate__fadeIn">
+                <h2>Upcoming Events</h2>
+                <div id="eventsList"></div>
+            </section>
+        </main>
+
+        <button id="addEventBtn" class="floating-btn">+</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
